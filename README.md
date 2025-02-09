@@ -24,7 +24,6 @@ No setup required:
     - When hovered show a mini overview of items in basket (blank for now)
     - Open basket sidepanel (right) when clicked (blank for now)
 - Setup Github action to run tests when pushing
-- Setup Vitest Code Coverage to ensure testing covers everythings throughout development
 ### Step 3
 - Create Product component
 - Formalise product test
@@ -50,3 +49,4 @@ No setup required:
 - Add light/dark mode option
 
 ## Potential improvements if given more time
+- Setup Vitest Code Coverage to ensure testing covers everythings throughout development

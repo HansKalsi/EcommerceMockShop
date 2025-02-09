@@ -11,8 +11,16 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@mantine/core": "^7.16.3",
+    "@mantine/hooks": "^7.16.3",
+    "bootstrap": "^5.3.3",
+    "localforage": "^1.10.0",
+    "match-sorter": "^8.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

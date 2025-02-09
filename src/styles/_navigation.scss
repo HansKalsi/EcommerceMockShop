@@ -1,0 +1,35 @@
+.navigation {
+    background-color: #0D6EFD;
+    width: 100vw;
+    height: 5vh;
+    align-content: center;
+
+    & > img {
+        width: 28px;
+
+        &:first-of-type {
+            float: left;
+        }
+
+        &:last-of-type {
+            float: right;
+            cursor: pointer;
+        }
+    }
+
+    &__links {
+        margin-left: 5vw;
+        float: inline-start;
+        height: 28px;
+    }
+
+    &__link {
+        color: #FD9C0D;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
