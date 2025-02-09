@@ -44,6 +44,7 @@ No setup required:
 ### End Game Improvements
 - Add testimonials section to Home page (gives user assurance of quality)
 - Add a ‘on the way’ section to the home page so the user can see what they’ve ordered (add a warning that unless logged in this information may disappear (which it will when the cache is deleted))
+- Lazy loading where possible
 - Create Product modal
     - In desktop, when hovering (not when focused to avoid keyboard user annoyance) a product, it focuses attention on that product via a ‘mini modal’, this will have buttons available to amend basket, remove from basket, and add to basket.
 - Add light/dark mode option
