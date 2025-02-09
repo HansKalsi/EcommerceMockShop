@@ -1,12 +1,12 @@
 # EcommerceMockShop
 
 ## Project Overview
-This is a quick (4-6 hour) project with the goal of creating an ecommerce website that primarily has a product page, persistent mini-basket, uses the (Mock.shop API)[https://mock.shop/], and is responsive.
+This is a quick (4-6 hour) project with the goal of creating an ecommerce website that primarily has a product page, persistent mini-basket, uses the [Mock.shop API](https://mock.shop/), and is responsive.
 
 ## Setup Instructions
 No setup required:
-- View the code via the (GitHub Repo)[https://github.com/HansKalsi/EcommerceMockShop]
-- View the deployed (Vercel website)[]
+- View the code via the [GitHub Repo](https://github.com/HansKalsi/EcommerceMockShop)
+- View the deployed [Vercel website]()
 
 ## Technical Decisions and Reasoning
 ### Step 1
