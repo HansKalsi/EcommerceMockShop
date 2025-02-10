@@ -6,7 +6,7 @@ This is a quick (4-6 hour) project with the goal of creating an ecommerce websit
 ## Setup Instructions
 No setup required:
 - View the code via the [GitHub Repo](https://github.com/HansKalsi/EcommerceMockShop)
-- View the deployed [Vercel website]()
+- View the deployed [Vercel website](https://ecommerce-mock-shop.vercel.app/)
 
 ## Technical Decisions and Reasoning
 ### Step 1

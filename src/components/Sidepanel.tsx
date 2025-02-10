@@ -25,7 +25,7 @@ export function Sidepanel(props: { open: boolean }) {
     }, [basket]);
 
     return (
-        <div role="sidepanel" className={`sidepanel ${props.open ? 'open' : ''}`}>
+        <div role="tabpanel" className={`sidepanel ${props.open ? 'open' : ''}`}>
             <header>
                 <h2>Basket</h2>
             </header>

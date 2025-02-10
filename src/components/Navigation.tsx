@@ -42,7 +42,7 @@ export function Navigation() {
                     </Group>
 
                     <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" aria-label="Burger Menu" />
-                    <Image onClick={toggleBasket} className="white-svg" src={basketIcon} />
+                    <Image onClick={toggleBasket} className="white-svg" src={basketIcon} alt="Basket/Cart" />
                 </Container>
                 <Sidepanel open={basketOpened} />
             </header>

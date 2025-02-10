@@ -60,6 +60,7 @@
 
         button {
             background-color: $orange !important;
+            color: #242424 !important;
         
             &:hover {
                 background-color: darken($orange, 10%) !important;
