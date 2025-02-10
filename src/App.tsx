@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/*' element={<Navigation />}>
+    <Route path='/' element={<Navigation />}>
       <Route index element={<Home />} />
       <Route path='products' element={<Products />} />
       <Route path='about' element={<About />} />
