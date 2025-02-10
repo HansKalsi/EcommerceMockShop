@@ -5,7 +5,6 @@ import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { Navigation } from "../components/Navigation";
 import { MantineProvider } from "@mantine/core";
 import Home from "../pages/Home";
-import Products from "../pages/Products";
 import About from "../pages/About";
 import { Product } from "../components/Product";
 import { productTestData } from "./Product.test";
