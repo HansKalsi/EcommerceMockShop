@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import ecommerceLogo from "/ecommerce-logo.svg";
 import basketIcon from "/basket-icon.svg";
 import { Container } from "react-bootstrap";
+import { Sidepanel } from "./Sidepanel";
 
 interface LinkType {
     link: string;
@@ -18,6 +19,7 @@ const links: LinkType[] = [
 
 export function Navigation() {
     const [opened, { toggle }] = useDisclosure(false);
+    const [basketOpened, { toggle: toggleBasket }] = useDisclosure(false);
 
     const items = links.map((link) => (
         <Link
@@ -40,10 +42,11 @@ export function Navigation() {
                     </Group>
 
                     <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" aria-label="Burger Menu" />
-                    <Image className="white-svg" src={basketIcon} />
+                    <Image onClick={toggleBasket} className="white-svg" src={basketIcon} />
                 </Container>
             </header>
             <Outlet />
+            <Sidepanel open={basketOpened} />
         </>
     )
 }

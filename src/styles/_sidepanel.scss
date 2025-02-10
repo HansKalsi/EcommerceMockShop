@@ -1,0 +1,31 @@
+.sidepanel {
+    background-color: white;
+    color: #242424;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 6vh;
+    height: 88vh; // 6vh top and bottom of equal space
+    width: 20rem;
+
+    > header, > footer {
+        align-content: center;
+        text-align: center;
+        height: 4vh;
+    }
+
+    > header {
+
+        h2 {
+            margin: unset;
+        }
+    }
+
+    > main {
+        height: 80vh;
+    }
+
+    > footer {
+
+    }
+}

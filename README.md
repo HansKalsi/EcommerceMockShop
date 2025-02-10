@@ -21,7 +21,6 @@ No setup required:
     - Use React Rotuer routing for switching tabs/pages
 - Formalise navigation test
 - Top right setup a floating basket icon
-    - When hovered show a mini overview of items in basket (blank for now)
     - Open basket sidepanel (right) when clicked (blank for now)
 - Setup Github action to run tests when pushing
 ### Step 3
@@ -50,3 +49,4 @@ No setup required:
 
 ## Potential improvements if given more time
 - Setup Vitest Code Coverage to ensure testing covers everythings throughout development
+- When hovering basket icon show a mini overview of items in basket

@@ -1,4 +1,5 @@
 @import './navigation';
+@import './sidepanel';
 
 #root {
     width: 100vw;
@@ -6,8 +7,7 @@
 }
 
 .page {
-    padding-top: 1rem;
-    // background-color: white;
+    padding-top: 1vh;
 }
 
 .white-svg {
