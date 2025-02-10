@@ -34,7 +34,7 @@ export function Sidepanel(props: { open: boolean }) {
             </main>
             <footer>
                 <p>Total: £{total}</p>
-                <Button onClick={() => console.log('click')}>Checkout</Button>
+                <Button onClick={() => console.log('checkout triggered')}>Checkout</Button>
             </footer>
         </div>
     )

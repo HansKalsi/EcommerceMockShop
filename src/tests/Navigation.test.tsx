@@ -22,13 +22,20 @@ describe("Navigation", () => {
         expect(getByText("About")).toBeInTheDocument();
     });
     it("Navigation component routes correctly for Home", () => {
-        const { getByTestId } = render(
-            <MemoryRouter>
-                <App />
-            </MemoryRouter>
+        const { getByTestId, getByText } = render(
+            <MantineProvider>
+                <MemoryRouter initialEntries={["/"]}>
+                    <Routes>
+                        <Route path="/" element={<Navigation/>}>
+                            <Route index element={<Home />} />
+                        </Route>
+                    </Routes>
+                </MemoryRouter>
+            </MantineProvider>
         );
         fireEvent.click(getByTestId("Home"));
         expect(window.location.pathname).toBe("/");
+        expect(getByText("Welcome to the ecommerce mock shop!")).toBeInTheDocument();
     });
     it("Navigation component routes correctly for Products", () => {
         const { getByTestId } = render(
@@ -61,6 +68,6 @@ describe("Navigation", () => {
             </MantineProvider>
         );
         fireEvent.click(getByTestId("About"));
-        expect(getByText("About content")).toBeInTheDocument();
+        expect(getByText("Our Story")).toBeInTheDocument();
     });
 });

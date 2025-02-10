@@ -34,18 +34,9 @@ No setup required:
 - Formalise basket tests
 - Create Basket overview component
 ### Step 5
-- Create ‘Purchase Screen’ component
 - Create integration test for full lifecycle (go to products, add first product, increase via basket by one, check total cost, go to ‘purchase screen’, complete purchase, check basket when autoredirected to home page)
 ### Step 6 (micro-interactions)
-- When adding a product to the basket, have a ‘fairy’ of the image float up to the top right of the screen (to show it being added)
 - Host app to Vercel
-### End Game Improvements
-- Add testimonials section to Home page (gives user assurance of quality)
-- Add a ‘on the way’ section to the home page so the user can see what they’ve ordered (add a warning that unless logged in this information may disappear (which it will when the cache is deleted))
-- Lazy loading where possible
-- Create Product modal
-    - In desktop, when hovering (not when focused to avoid keyboard user annoyance) a product, it focuses attention on that product via a ‘mini modal’, this will have buttons available to amend basket, remove from basket, and add to basket.
-- Add light/dark mode option
 
 ## Potential improvements if given more time
 - Setup Vitest Code Coverage to ensure testing covers all code
@@ -54,3 +45,11 @@ No setup required:
 - Add more obvious UI that there are more items in basket for better UX
 - Add burger navigation to allow for navigation in mobile
 - Close sidepanel when clicking elsewhere
+- Create ‘Purchase Screen’ component so the user can checkout their cart/basket
+- UX improvement: When adding a product to the basket, have a ‘fairy’ (aka a bubble) of the image float up to the top right of the screen (to show it being added)
+- Add testimonials section to Home page (gives user assurance of quality)
+- Add a ‘on the way’ section to the home page so the user can see what they’ve ordered (add a warning that unless logged in this information may disappear (which it will when the cache is deleted))
+- Lazy loading where possible
+- Create Product modal
+    - In desktop, when hovering (not when focused to avoid keyboard user annoyance) a product, it focuses attention on that product via a ‘mini modal’, this will have buttons available to amend basket, remove from basket, and add to basket.
+- Add light/dark mode option
