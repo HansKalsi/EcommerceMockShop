@@ -35,7 +35,7 @@ No setup required:
 - Create Basket overview component
 ### Step 5
 - Create integration test for full lifecycle (go to products, add first product, increase via basket by one, check total cost, go to ‘purchase screen’, complete purchase, check basket when autoredirected to home page)
-### Step 6 (micro-interactions)
+### Step 6
 - Host app to Vercel
 
 ## Potential improvements if given more time
