@@ -1,5 +1,5 @@
 .navigation {
-    background-color: #0D6EFD;
+    background-color: $blue;
     width: 100vw;
     height: 5vh;
     align-content: center;
@@ -24,7 +24,7 @@
     }
 
     &__link {
-        color: #FD9C0D;
+        color: $orange;
         text-decoration: none;
         font-weight: bold;
 

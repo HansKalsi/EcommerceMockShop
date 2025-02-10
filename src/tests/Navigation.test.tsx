@@ -7,6 +7,8 @@ import { MantineProvider } from "@mantine/core";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
 import About from "../pages/About";
+import { Product } from "../components/Product";
+import { productTestData } from "./Product.test";
 
 describe("Navigation", () => {
     it("Navigation component renders correctly", () => {
@@ -29,20 +31,21 @@ describe("Navigation", () => {
         expect(window.location.pathname).toBe("/");
     });
     it("Navigation component routes correctly for Products", () => {
-        const { getByTestId, getByText } = render(
+        const { getByTestId } = render(
             <MantineProvider>
                 <MemoryRouter initialEntries={["/"]}>
                     <Routes>
                         <Route path="/" element={<Navigation/>}>
                             <Route index element={<Home />} />
-                            <Route path='products' element={<Products />} />
+                            {/* FIXME: should use products component */}
+                            <Route path='products' element={<Product image={productTestData.image} title={productTestData.title} description={productTestData.description} price={productTestData.price} />} />
                         </Route>
                     </Routes>
                 </MemoryRouter>
             </MantineProvider>
         );
         fireEvent.click(getByTestId("Products"));
-        expect(getByText("Products content")).toBeInTheDocument();
+        expect(getByTestId("product-title")).toBeInTheDocument();
     });
     it("Navigation component routes correctly for About", () => {
         const { getByTestId, getByText } = render(

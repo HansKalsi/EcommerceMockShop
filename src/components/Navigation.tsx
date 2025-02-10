@@ -6,12 +6,12 @@ import basketIcon from "/basket-icon.svg";
 import { Container } from "react-bootstrap";
 import { Sidepanel } from "./Sidepanel";
 
-interface LinkType {
+interface LinkInterface {
     link: string;
     label: string;
 }
 
-const links: LinkType[] = [
+const links: LinkInterface[] = [
     { link: "/", label: "Home" },
     { link: "/products", label: "Products" },
     { link: "/about", label: "About" },

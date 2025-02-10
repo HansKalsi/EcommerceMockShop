@@ -48,5 +48,6 @@ No setup required:
 - Add light/dark mode option
 
 ## Potential improvements if given more time
-- Setup Vitest Code Coverage to ensure testing covers everythings throughout development
+- Setup Vitest Code Coverage to ensure testing covers all code
 - When hovering basket icon show a mini overview of items in basket
+- Incorperate infinite scrolling to load more products

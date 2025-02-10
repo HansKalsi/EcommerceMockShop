@@ -1,10 +1,44 @@
 import { Container } from "react-bootstrap";
+import { Product } from "../components/Product";
+import { useEffect, useRef, useState } from "react";
+import { MockShopResponse } from "../interfaces/product_interfaces";
+import { Button } from "@mantine/core";
 
 function Products() {
+    const productsFetched = useRef(0);
+    const [products, setProducts] = useState<MockShopResponse>();
+
+    useEffect(() => {
+        if (productsFetched.current === 0) {
+            // Load initial products
+            fetchProducts();
+        }
+    }, []);
+
+    async function fetchProducts() {
+        // Fetch 9 more products
+        productsFetched.current += 9;
+        // Fetch products from Mock Shop API
+        const request = await fetch(`https://mock.shop/api?query={products(first:%20${productsFetched.current}){edges%20{node%20{title%20description%20images(first:%201){edges%20{node%20{url}}}%20variants(first:%201){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}`);
+        const response = await request.json();
+        setProducts(response);
+    }
+
     return (
-        <main>
-            <Container className="page">
-                <h1>Products content</h1>
+        <main className="page">
+            <Container className="products">
+                {products?.data.products.edges.map((product, index) => (
+                    <Product
+                        key={index}
+                        image={product.node.images.edges[0].node.url || ""}
+                        title={product.node.title || ""}
+                        description={product.node.description || ""}
+                        price={product.node.variants.edges[0].node.price.amount || 0}
+                    />
+                ))}
+            </Container>
+            <Container style={{textAlign: "center"}}>
+                <Button className="products__button" onClick={fetchProducts}>Load More</Button>
             </Container>
         </main>
     );
