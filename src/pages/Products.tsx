@@ -47,7 +47,7 @@ function Products() {
             </Container>
             <Container style={{ position: "relative", textAlign: "center" }}>
                 <LoadingOverlay className="products__button--loading" visible={loadingMoreProducts.current} zIndex={1} />
-                <Button className="products__button" onClick={() => { toggleLoading(); fetchProducts(); }}>Load More</Button>
+                <Button className="products__button" onClick={() => { toggleLoading(); fetchProducts(); }}>View More</Button>
             </Container>
         </main>
     );
