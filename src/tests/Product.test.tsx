@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { Product, ProductProps } from "../components/Product";
+import { Product } from "../components/Product";
 import { MantineProvider } from "@mantine/core";
+import { ProductProps } from "../interfaces/product_interfaces";
 
 export const productTestData: ProductProps = {
     image: "https://plus.unsplash.com/premium_photo-1661964088064-dd92eaaa7dcf?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D",

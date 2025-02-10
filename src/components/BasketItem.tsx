@@ -27,10 +27,10 @@ export function BasketItem(props: ProductProps) {
 
     return (
         <div className="basket-item">
-            <Button className="basket-item__minus" onClick={() => removeItem()} variant="light" color="red">-</Button>
+            <Button data-testid="minus_button" className="basket-item__minus" onClick={() => removeItem()} variant="light" color="red">-</Button>
             <Image className="basket-item__image" src={props.image} alt={`${props.title} Image`} />
             <h4 className="basket-item__title">{props.quantity} {props.title}</h4>
-            <Button className="basket-item__plus" onClick={() => addItem()} variant="light" color="green">+</Button>
+            <Button data-testid="plus_button" className="basket-item__plus" onClick={() => addItem()} variant="light" color="green">+</Button>
         </div>
     )
 }
