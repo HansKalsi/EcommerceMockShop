@@ -1,16 +1,10 @@
 import { useContext } from "react";
 import { BASKET_CONTEXT } from "../global_contexts";
 import { Button, Image } from "@mantine/core";
-
-export interface ProductProps {
-    image: string;
-    title: string;
-    description: string;
-    price: number;
-}
+import { ProductProps } from "../interfaces/product_interfaces";
 
 export function Product(props: ProductProps) {
-    const { updateBasketData } = useContext(BASKET_CONTEXT);
+    const { basket, updateBasketData } = useContext(BASKET_CONTEXT);
 
     return (
         <div className="product">
@@ -20,7 +14,7 @@ export function Product(props: ProductProps) {
                 <h3 className="product__info_price" data-testid="product-price">£{props.price}</h3>
             </div>
             <p className="product__description" data-testid="product-description">{props.description}</p>
-            <Button className="product__button" data-testid="product-add-to-basket-button" onClick={() => updateBasketData(props)}>Add to Basket</Button>
+            <Button className="product__button" data-testid="product-add-to-basket-button" onClick={() => updateBasketData([...basket, props])}>Add to Basket</Button>
         </div>
     )
 }

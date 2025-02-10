@@ -1,0 +1,51 @@
+.basket {
+
+    &-item {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 80% 20%;
+        grid-template-areas:
+            'minus image plus'
+            '. title .';
+        margin-bottom: 20px;
+    
+        @media screen and (max-width: 575px) {
+            max-width: 100%;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        &__minus, &__plus {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 8px !important;
+        }
+
+        &__minus {
+            grid-area: minus;
+        }
+
+        &__plus {
+            grid-area: plus;
+        }
+
+        &__image {
+            grid-area: image;
+            height: 100%;
+        }
+
+        &__title {
+            grid-area: title;
+            align-content: center;
+            text-align: center;
+        }
+    }
+}

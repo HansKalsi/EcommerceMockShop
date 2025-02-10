@@ -51,3 +51,6 @@ No setup required:
 - Setup Vitest Code Coverage to ensure testing covers all code
 - When hovering basket icon show a mini overview of items in basket
 - Incorperate infinite scrolling to load more products
+- Add more obvious UI that there are more items in basket for better UX
+- Add burger navigation to allow for navigation in mobile
+- Close sidepanel when clicking elsewhere

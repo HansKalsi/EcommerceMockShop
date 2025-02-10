@@ -5,6 +5,8 @@ import { Navigation } from './components/Navigation';
 import Products from './pages/Products';
 import About from './pages/About';
 import { MantineProvider } from '@mantine/core';
+import { BASKET_CONTEXT } from './global_contexts';
+import { useEffect, useState } from 'react';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,10 +19,18 @@ export const router = createBrowserRouter(
 );
 
 function App() {
+  const [basket, updateBasketData] = useState(localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')!) : []);
+
+  useEffect(() => {
+    localStorage.setItem('basket', JSON.stringify(basket));
+  }, [basket]);
+
   return (
+    <BASKET_CONTEXT.Provider value={{ basket, updateBasketData }}>
       <MantineProvider defaultColorScheme="dark">
         <RouterProvider router={router} />
       </MantineProvider>
+    </BASKET_CONTEXT.Provider>
   )
 }
 

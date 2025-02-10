@@ -35,3 +35,11 @@ interface ProductPrice {
         }
     }
 }
+
+export interface ProductProps {
+    image: string;
+    title: string;
+    description: string;
+    price: number;
+    quantity?: number;
+}

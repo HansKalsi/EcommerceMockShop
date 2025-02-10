@@ -2,10 +2,17 @@
 @import './navigation';
 @import './sidepanel';
 @import './product';
+@import './basket';
 
 #root {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+
+    > header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
 }
 
 .page {
