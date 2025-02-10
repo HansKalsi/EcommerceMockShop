@@ -17,6 +17,19 @@
         &:hover, &:focus {
             opacity: 0.9;
         }
+
+        &--loading {
+            width: 100%;
+            max-width: 50%;
+            position-area: center;
+            margin-top: 40px;
+            background: orange;
+            border-radius: 4px;
+
+            @media screen and (max-width: 575px) {
+                max-width: 100%;
+            }
+        }
     }
 }
 

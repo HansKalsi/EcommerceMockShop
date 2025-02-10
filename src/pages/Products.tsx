@@ -2,11 +2,12 @@ import { Container } from "react-bootstrap";
 import { Product } from "../components/Product";
 import { useEffect, useRef, useState } from "react";
 import { MockShopResponse } from "../interfaces/product_interfaces";
-import { Button } from "@mantine/core";
+import { Button, LoadingOverlay } from "@mantine/core";
 
 function Products() {
     const productsFetched = useRef(0);
     const [products, setProducts] = useState<MockShopResponse>();
+    const loadingMoreProducts = useRef(true);
 
     useEffect(() => {
         if (productsFetched.current === 0) {
@@ -22,6 +23,13 @@ function Products() {
         const request = await fetch(`https://mock.shop/api?query={products(first:%20${productsFetched.current}){edges%20{node%20{title%20description%20images(first:%201){edges%20{node%20{url}}}%20variants(first:%201){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}`);
         const response = await request.json();
         setProducts(response);
+        if (loadingMoreProducts.current) {
+            toggleLoading(); // Stop loading overlay
+        }
+    }
+
+    function toggleLoading() {
+        loadingMoreProducts.current = !loadingMoreProducts.current;
     }
 
     return (
@@ -37,8 +45,9 @@ function Products() {
                     />
                 ))}
             </Container>
-            <Container style={{textAlign: "center"}}>
-                <Button className="products__button" onClick={fetchProducts}>Load More</Button>
+            <Container style={{ position: "relative", textAlign: "center" }}>
+                <LoadingOverlay className="products__button--loading" visible={loadingMoreProducts.current} zIndex={1} />
+                <Button className="products__button" onClick={() => { toggleLoading(); fetchProducts(); }}>Load More</Button>
             </Container>
         </main>
     );
