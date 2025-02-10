@@ -8,7 +8,6 @@ export function Sidepanel(props: { open: boolean }) {
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
-        console.log('basket', basket);
         if (basket.length > 0) {
             let newTotal = 0;
             basket.forEach(item => {
